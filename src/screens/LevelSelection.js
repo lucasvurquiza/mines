@@ -1,9 +1,10 @@
 import React from 'react'
 import { View, StyleSheet, Text, TouchableOpacity, Modal } from 'react-native'
+import Level from '../components/Level'
 
 export default props => {
     return (
-        <Modal 
+        <Modal
             onRequestClose={props.onCancel}
             visible={props.isVisible}
             animationType='slide'
@@ -11,21 +12,42 @@ export default props => {
         >
             <View style={styles.container}>
                 <Text style={styles.title}>Selecione o Nível</Text>
-                <TouchableOpacity 
+                <Level
+                    buttonStyle={styles.button}
+                    stylesLevel={styles.bgEasy}
+                    onLevelSelected={() => props.onLevelSelected(0.1)}
+                    buttonLabel={styles.buttonLabel}
+                    label='Fácil'
+                />
+                {/* <TouchableOpacity 
                     style={[styles.button, styles.bgEasy]}
                     onPress={() => props.onLevelSelected(0.1)}>
                     <Text style={styles.buttonLabel}>Fácil</Text>
-                </TouchableOpacity>
-                <TouchableOpacity 
+                </TouchableOpacity> */}
+                <Level
+                    buttonStyle={styles.button}
+                    stylesLevel={styles.bgNormal}
+                    onLevelSelected={() => props.onLevelSelected(0.2)}
+                    buttonLabel={styles.buttonLabel}
+                    label='Intermediário'
+                />
+                {/* <TouchableOpacity 
                     style={[styles.button, styles.bgNormal]}
                     onPress={() => props.onLevelSelected(0.2)}>
                     <Text style={styles.buttonLabel}>Intermediário</Text>
-                </TouchableOpacity>
-                <TouchableOpacity 
+                </TouchableOpacity> */}
+                <Level
+                    buttonStyle={styles.button}
+                    stylesLevel={styles.bgHard}
+                    onLevelSelected={() => props.onLevelSelected(0.3)}
+                    buttonLabel={styles.buttonLabel}
+                    label='Difícil'
+                />
+                {/* <TouchableOpacity 
                     style={[styles.button, styles.bgHard]}
                     onPress={() => props.onLevelSelected(0.3)}>
                     <Text style={styles.buttonLabel}>Difícil</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
         </Modal>
     )
@@ -46,7 +68,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 30,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
     button: {
         marginTop: 10,
