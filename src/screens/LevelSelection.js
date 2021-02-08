@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, Text, TouchableOpacity, Modal } from 'react-native'
+import { View, StyleSheet, Text, Modal } from 'react-native'
 import Level from '../components/Level'
 
 export default props => {
