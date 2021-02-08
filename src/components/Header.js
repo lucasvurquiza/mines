@@ -11,7 +11,7 @@ export default props => {
                 </TouchableOpacity>
                 <Text style={styles.flagsLeft}> = {props.flagsLeft}</Text>
             </View>
-            <TouchableOpacity styles={styles.button} onPress={props.onNewGame}>
+            <TouchableOpacity style={styles.button} onPress={props.onNewGame}>
                 <Text style={styles.buttonLabel}>Novo Jogo</Text>
             </TouchableOpacity>
         </View>
