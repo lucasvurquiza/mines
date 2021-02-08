@@ -6,3 +6,6 @@
 
 ![](mines.png)
 
+#### [Cod3r Cursos - GitHub](https://github.com/cod3rcursos)
+#### [Cod3r Cursos - Udemy](https://www.udemy.com/user/cod3r-3/)
+#### [Cod3r Cursos - Site](https://www.cod3r.com.br/)
